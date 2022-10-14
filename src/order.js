@@ -41,16 +41,6 @@ function searchOrder(ordersArray, food) {
 } 
 
 
-// function searchOrder(ordersArray, food) {
-//   var x = false
-//   for (var i = 0; i < ordersArray.length; i++) {
-//     if (ordersArray[i].item === food) {
-//       x = true
-//     }
-//   }
-//   return x
-// } 
-
 
 module.exports = {
   takeOrder,
