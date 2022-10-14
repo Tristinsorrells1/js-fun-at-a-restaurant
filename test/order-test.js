@@ -10,11 +10,11 @@ var {
 
 describe("order.js", function() {
   describe("takeOrder", function() {
-    it.skip("should be a function", function() {
+    it("should be a function", function() {
       assert.isFunction(takeOrder);
     });
 
-    it.skip("should add new orders to an order type list", function() {
+    it("should add new orders to an order type list", function() {
       var order1 = {
         orderNumber: 1,
         item: "burger",
@@ -36,11 +36,15 @@ describe("order.js", function() {
       takeOrder(order1, deliveryOrders);
       takeOrder(order2, deliveryOrders);
 
+      //order1 and deliveryOrders are just the param names, can change
+
       assert.equal(deliveryOrders[0], order1);
       assert.equal(deliveryOrders[1], order2);
     });
 
-    it.skip("should add another order to an order type list", function () {
+    //push orders into array
+
+    it("should add another order to an order type list", function () {
 
       var order1 = {
         orderNumber: 1,
@@ -76,7 +80,7 @@ describe("order.js", function() {
       assert.equal(takeOutOrders[2], order3);
     });
 
-    it.skip("should not be able to hold more than 3 orders at a time", function() {
+    it("should not be able to hold more than 3 orders at a time", function() {
       var order1 = {
         orderNumber: 12342,
         item: "burger",
@@ -120,11 +124,11 @@ describe("order.js", function() {
   }); 
 
   describe("refundOrder", function() {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(refundOrder);
     });
 
-    it.skip("should remove an order by order number", function() {
+    it("should remove an order by order number", function() {
       var order1 = {
         orderNumber: 1657,
         item: "burger",
@@ -157,7 +161,7 @@ describe("order.js", function() {
       assert.deepEqual(deliveryOrders, [order2, order3])
     });
 
-    it.skip("should remove a different order by order number", function () {
+    it("should remove a different order by order number", function () {
       var order1 = {
         orderNumber: 1241,
         item: "burger",
