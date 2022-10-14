@@ -196,11 +196,11 @@ describe("order.js", function() {
   });
 
   describe("listOrders", function() {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(listItems);
     });
 
-    it.skip("should list out all of the order items by name", function() {
+    it("should list out all of the order items by name", function() {
       var order1 = {
         orderNumber: 1,
         item: "burger",

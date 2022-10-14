@@ -7,15 +7,8 @@ function takeOrder(order, deliveryOrders) {
 
 ////////////////////////////refundOrder Section///////////////////////
 
-// function refundOrder(orderNum, deliveryOrders2) {
-//   for (var i =0; i < deliveryOrders2.length; i++)
-//     console.log([i])
-//     return deliveryOrders2.shift(deliveryOrders2[i].orderNumber)
-// }
-
 function refundOrder(orderNum, deliveryOrders2) {
   for (var i = 0; i < deliveryOrders2.length; i++) {
-  console.log(deliveryOrders2[i].orderNumber)
     if (deliveryOrders2[i].orderNumber === orderNum) {
        return deliveryOrders2.splice(i, 1)
       
@@ -23,11 +16,21 @@ function refundOrder(orderNum, deliveryOrders2) {
 }
 }
 
+////////////////////////////listItems Section///////////////////////
+// the deliveryOrderArray contains 3 objects, we want to all of the item keys 
+
+function listItems(deliveryOrderArray) {
+  var newArray = deliveryOrderArray
+  for (var i = 0; i < deliveryOrderArray.length; i++) {
+    newArray.push(deliveryOrderArray[i].item)
+    console.log(deliveryOrderArray[i].item)
+  }
+}
 
 
 module.exports = {
   takeOrder,
   refundOrder,
-  // listItems,
+  listItems,
   // searchOrder
 }
