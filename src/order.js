@@ -17,20 +17,44 @@ function refundOrder(orderNum, deliveryOrders2) {
 }
 
 ////////////////////////////listItems Section///////////////////////
-// the deliveryOrderArray contains 3 objects, we want to all of the item keys 
 
 function listItems(deliveryOrderArray) {
-  var newArray = deliveryOrderArray
+  var x = []
   for (var i = 0; i < deliveryOrderArray.length; i++) {
-    newArray.push(deliveryOrderArray[i].item)
-    console.log(deliveryOrderArray[i].item)
-  }
+    x.push(deliveryOrderArray[i].item)
+  } 
+  return x.join(", ")
 }
+
+
+
+////////////////////////////searchOrder Section///////////////////////
+
+function searchOrder(ordersArray, food) {
+  var x = false
+  for (var i = 0; i < ordersArray.length; i++) {
+    if (ordersArray[i].item === food) {
+      x = true
+    }
+}
+   return x
+} 
+
+
+// function searchOrder(ordersArray, food) {
+//   var x = false
+//   for (var i = 0; i < ordersArray.length; i++) {
+//     if (ordersArray[i].item === food) {
+//       x = true
+//     }
+//   }
+//   return x
+// } 
 
 
 module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+  searchOrder
 }
