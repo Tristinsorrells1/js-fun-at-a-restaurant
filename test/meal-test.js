@@ -144,7 +144,7 @@ describe("meal.js", function() {
     });
 
 
-    it.skip("should return a different recipe object", function () {
+    it("should return a different recipe object", function () {
       var ingredients = [];
       addIngredients("bread", ingredients);
       addIngredients("cheese", ingredients);

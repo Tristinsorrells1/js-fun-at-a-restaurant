@@ -1,9 +1,11 @@
 
 ////////////////////////////nameMenuItem Section///////////////////////
 function nameMenuItem(name) {
-  return `Delicious ${name}`
-}
+    return `Delicious ${name}`
+  }
+
 // nameMenuItem();
+
 
 
 ////////////////////////////createMenuItem Section///////////////////////
@@ -49,15 +51,18 @@ function decreasePrice(menuItem) {
 
 //////////////////////////createRecipe Section///////////////////////
 
-function createRecipe(food, title, ingredients, type) { 
+function createRecipe(title, ingredients, type) { 
   recipe = {
-    title: nameMenuItem(food),
+    title: title,
     ingredients: ingredients,
     type: type
   }
 
   return recipe
 }
+
+
+
 
 module.exports = {
   nameMenuItem,
