@@ -30,9 +30,14 @@ function addMenuItem(pizzaRestaurant, food) {
   }
 
 
+///////////////////////////removeMenuItem Section///////////////////////
 
-
-
+function removeMenuItem(pizzaRestaurant, food, type) {
+if (type === "breakfast"){
+  pizzaRestaurant.menus.breakfast.splice(0, 1)
+  return "No one is eating our Bacon and Eggs Pizza - it has been removed from the breakfast menu!"
+}
+}
 
 
 
@@ -46,5 +51,5 @@ function addMenuItem(pizzaRestaurant, food) {
 module.exports = {
   createRestaurant, 
   addMenuItem,
-  // removeMenuItem
+  removeMenuItem
 }
