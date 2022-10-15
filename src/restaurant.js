@@ -37,6 +37,10 @@ if (type === "breakfast"){
   pizzaRestaurant.menus.breakfast.splice(0, 1)
   return "No one is eating our Bacon and Eggs Pizza - it has been removed from the breakfast menu!"
 }
+else if (type === "dinner"){
+  pizzaRestaurant.menus.dinner.splice(0, 1)
+  return "No one is eating our Veggie Pizza - it has been removed from the dinner menu!"
+}
 }
 
 
