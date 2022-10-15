@@ -32,53 +32,10 @@ function addMenuItem(pizzaRestaurant, food) {
 
 ///////////////////////////removeMenuItem Section///////////////////////
 
+
 function removeMenuItem(pizzaRestaurant, food, type) {
-  if (type === "breakfast") {
-    if (type === "breakfast" && !pizzaRestaurant.menus.breakfast.includes(food)) {
-      pizzaRestaurant.menus.breakfast.splice(0, 1)
-      return `Sorry, we don't sell ${food}, try adding a new recipe!`
-    } 
-    else {
-      pizzaRestaurant.menus.breakfast.splice(0, 1)
-      return "No one is eating our Bacon and Eggs Pizza - it has been removed from the breakfast menu!"
-    } 
-  }
-
-  if (type === "dinner") {
-    if (type === "dinner" && !pizzaRestaurant.menus.dinner.includes(food)) {
-      pizzaRestaurant.menus.dinner.splice(0, 1)
-      return `Sorry, we don't sell ${food}, try adding a new recipe!`
-    } else {
-      return "No one is eating our Veggie Pizza - it has been removed from the dinner menu!"
-    }
-  }
-}
-
-
-
-
-// Code that satisfies the last removeMenuItem //
-
-// function removeMenuItem(pizzaRestaurant, food, type) {
-//   if (type === "breakfast" && pizzaRestaurant.menus.breakfast.includes(food)) {
-//     pizzaRestaurant.menus.breakfast.splice(0, 1)
-//     return "No one is eating our Bacon and Eggs Pizza - it has been removed from the breakfast menu!"
-//   } else {
-//     return `Sorry, we don't sell ${food}, try adding a new recipe!`
-//   }
-
-//   if (type === "dinner" && pizzaRestaurant.menus.dinner.includes(food)) {
-//     pizzaRestaurant.menus.dinner.splice(0, 1)
-//     return "No one is eating our Veggie Pizza - it has been removed from the dinner menu!"
-//   } else {
-//     return `Sorry, we don't sell ${food}, try adding a new recipe!`
-//   }
-// }
-
-
-//Code that satisfies all but the second test in removeMenuItem//
-function removeMenuItem(pizzaRestaurant, food, type) {
-  if (type === "breakfast" && pizzaRestaurant.menus.breakfast.includes(food)) {
+  // console.log(pizzaRestaurant.menus.breakfast[0].name)
+  if (type === "breakfast" && pizzaRestaurant.menus.breakfast[0].name.includes(food)) {
     pizzaRestaurant.menus.breakfast.splice(0, 1)
     return "No one is eating our Bacon and Eggs Pizza - it has been removed from the breakfast menu!"
   }
