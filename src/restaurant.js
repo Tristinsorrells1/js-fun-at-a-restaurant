@@ -15,37 +15,31 @@ function createRestaurant(name) {
 ///////////////////////////addMenuItem Section///////////////////////
 
 function addMenuItem(pizzaRestaurant, food) {
-  
-  if (food.type === "breakfast" && pizzaRestaurant.menus.breakfast){
+  if (food.type === "breakfast" && !pizzaRestaurant.menus.breakfast.includes(food)) {
     var y = pizzaRestaurant.menus.breakfast
     y.push(food)
   }
-  else if (food.type === "lunch") {
+  else if (food.type === "lunch" && !pizzaRestaurant.menus.lunch.includes(food)) {
     var z = pizzaRestaurant.menus.lunch
     z.push(food)
   }
-  else {
-    var x = pizzaRestaurant.menus.lunch
+  else if (food.type === "dinner" && !pizzaRestaurant.menus.dinner.includes(food)) {
+    var x = pizzaRestaurant.menus.dinner
     x.push(food)
   }
-}
+  }
 
 
-// function addMenuItem(pizzaRestaurant, food) {
 
-//   if (food.type === "breakfast") {
-//     var y = pizzaRestaurant.menus.breakfast
-//     y.push(food)
-//   }
-//   else if (food.type === "lunch") {
-//     var z = pizzaRestaurant.menus.lunch
-//     z.push(food)
-//   }
-//   else {
-//     var x = pizzaRestaurant.menus.lunch
-//     x.push(food)
-//   }
-// }
+
+
+
+
+
+
+
+
+
 
 
 
