@@ -34,30 +34,31 @@ function addMenuItem(pizzaRestaurant, food) {
 
 
 function removeMenuItem(pizzaRestaurant, food, type) {
-  // console.log(pizzaRestaurant.menus.breakfast[0].name)
-  if (type === "breakfast" && pizzaRestaurant.menus.breakfast[0].name.includes(food)) {
-    pizzaRestaurant.menus.breakfast.splice(0, 1)
-    return "No one is eating our Bacon and Eggs Pizza - it has been removed from the breakfast menu!"
+  console.log(pizzaRestaurant.menus.breakfast[0].name)
+  var hi = pizzaRestaurant.menus.breakfast[0].name
+  var hey = pizzaRestaurant.menus.dinner[0].name
+
+  if (type === "breakfast"){
+    if (hi === food) {
+      pizzaRestaurant.menus.breakfast.splice(0, 1)
+      return "No one is eating our Bacon and Eggs Pizza - it has been removed from the breakfast menu!"
+    }
+    else {
+      return `Sorry, we don't sell ${food}, try adding a new recipe!`
+
+    }
   }
 
   else if (type === "dinner") {
-    pizzaRestaurant.menus.dinner.splice(0, 1)
-    return "No one is eating our Veggie Pizza - it has been removed from the dinner menu!"
-  }
-
-  else if (type === "breakfast" && !pizzaRestaurant.menus.breakfast.includes(food)) {
-    pizzaRestaurant.menus.breakfast.splice(0, 1)
-    return `Sorry, we don't sell ${food}, try adding a new recipe!`
-  }
-
-
-  else if (type === "dinner" && pizzaRestaurant.menus.dinner.includes(food)) {
-    pizzaRestaurant.menus.dinner.splice(0, 1)
-    return "No one is eating our Veggie Pizza - it has been removed from the dinner menu!"
+    if (hey === food){
+      pizzaRestaurant.menus.dinner.splice(0, 1)
+      return "No one is eating our Veggie Pizza - it has been removed from the dinner menu!"
+    }
   } else {
     return `Sorry, we don't sell ${food}, try adding a new recipe!`
   }
 }
+
 
 
 
