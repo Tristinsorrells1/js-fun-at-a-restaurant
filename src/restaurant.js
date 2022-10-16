@@ -28,19 +28,18 @@ function addMenuItem(pizzaRestaurant, food) {
 
 
 ///////////////////////////removeMenuItem Section///////////////////////
-//breakfast is an object which is why includes(food) isn't working
 
 function removeMenuItem(pizzaRestaurant, food, type) {
-  for (var i = 0; i < pizzaRestaurant.menus[type].length; i++) {
-    if (food === pizzaRestaurant.menus[type][i].name) {
-      pizzaRestaurant.menus[type].splice(0, 1)
-      return `No one is eating our ${food} - it has been removed from the ${type} menu!`
-    }
+for (var i =0; i < pizzaRestaurant.menus[type].length; i++) {
+  if (pizzaRestaurant.menus[type][i].name === food) {
+    pizzaRestaurant.menus[type].splice(i, 1)
+    return `No one is eating our ${food} - it has been removed from the ${type} menu!`
   }
-  return `Sorry, we don't sell ${food}, try adding a new recipe!`
 }
-  
+return `Sorry, we don't sell ${food}, try adding a new recipe!`
+}
 
+ 
 
 
 
