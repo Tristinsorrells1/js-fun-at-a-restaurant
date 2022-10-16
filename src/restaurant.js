@@ -13,19 +13,16 @@ function createRestaurant(name) {
 }
 
 ///////////////////////////addMenuItem Section///////////////////////
+// we are adding an object inside the pizzaRestaurant object
+
 
 function addMenuItem(pizzaRestaurant, food) {
-  if (food.type === "breakfast" && !pizzaRestaurant.menus.breakfast.includes(food)) {
-    var y = pizzaRestaurant.menus.breakfast
-    y.push(food)
-  }
-  else if (food.type === "lunch" && !pizzaRestaurant.menus.lunch.includes(food)) {
-    var z = pizzaRestaurant.menus.lunch
-    z.push(food)
-  }
-  else if (food.type === "dinner" && !pizzaRestaurant.menus.dinner.includes(food)) {
-    var x = pizzaRestaurant.menus.dinner
-    x.push(food)
+  if (food.type === "lunch" && !pizzaRestaurant.menus.lunch.includes(food)) {
+    pizzaRestaurant.menus.lunch.push(food) 
+  } else if (food.type === "breakfast" && !pizzaRestaurant.menus.breakfast.includes(food)) {
+    pizzaRestaurant.menus.breakfast.push(food) 
+  } else if (food.type === "dinner" && !pizzaRestaurant.menus.dinner.includes(food)) {
+    pizzaRestaurant.menus.dinner.push(food)
   }
   }
 
