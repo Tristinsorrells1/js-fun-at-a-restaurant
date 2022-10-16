@@ -21,24 +21,24 @@ function refundOrder(orderNum, deliveryOrders2) {
 function listItems(deliveryOrderArray) {
   var x = []
   for (var i = 0; i < deliveryOrderArray.length; i++) {
-    x.push(deliveryOrderArray[i].item)
-  } 
-  return x.join(", ")
+  x.push(deliveryOrderArray[i].item)
 }
-
+return x.join( ", ")
+}
 
 
 ////////////////////////////searchOrder Section///////////////////////
 
 function searchOrder(ordersArray, food) {
-  var x = false
-  for (var i = 0; i < ordersArray.length; i++) {
-    if (ordersArray[i].item === food) {
-      x = true
-    }
+  for (var i =0; i <ordersArray.length; i++) {
+  if (ordersArray[i].item === food) {
+    return true
+  } 
 }
-   return x
-} 
+ return false
+}
+  
+
 
 
 

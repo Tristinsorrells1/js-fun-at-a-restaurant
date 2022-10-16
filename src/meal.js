@@ -45,8 +45,8 @@ function formatPrice(price) {
 
 //////////////////////////decreasePrice Section///////////////////////
 
-function decreasePrice(menuItem) {
-  return menuItem - (menuItem * .10)
+function decreasePrice(price) {
+  return price - (price * .10)
 }
 
 //////////////////////////createRecipe Section///////////////////////
